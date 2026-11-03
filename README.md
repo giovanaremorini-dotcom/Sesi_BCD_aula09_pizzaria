@@ -1,173 +1,173 @@
-Sesi_BCD_aula09_pizzaria
+# 🍕 Sistema de Banco de Dados — Pizzaria
 
-1. Sobre o Projeto
+> Projeto desenvolvido para a disciplina de **Banco de Dados**, utilizando SQL e MySQL para consultar e analisar informações de um sistema de gerenciamento de pizzaria.
 
-Este repositório contém uma atividade prática desenvolvida para a disciplina de Banco de Dados, do curso de Desenvolvimento de Sistemas — SENAI/SESI.
+---
 
-A atividade tem como tema um banco de dados de uma pizzaria, com o objetivo de praticar a linguagem SQL por meio da execução de consultas para recuperar e analisar informações armazenadas no banco de dados.
+## 📌 Sobre o Projeto
 
-O desenvolvimento envolve a utilização de comandos de consulta para identificar tabelas, contabilizar registros e obter informações relacionadas aos clientes, pizzas e pedidos.
+O projeto consiste em uma atividade prática de Banco de Dados, utilizando como cenário um sistema de gerenciamento de uma pizzaria.
 
-2. Objetivos
+A proposta é trabalhar com consultas SQL para recuperar informações armazenadas, analisar registros e compreender a organização dos dados relacionados aos clientes, pedidos e itens dos pedidos.
 
-O principal objetivo é aplicar os conhecimentos de Banco de Dados e SQL na consulta de informações de um sistema de pizzaria.
+A atividade permite aplicar conhecimentos de banco de dados relacionais e desenvolver consultas para responder a diferentes questões sobre as informações cadastradas.
 
-Durante a atividade, são trabalhados os seguintes objetivos:
+---
 
-Consultar a estrutura de um banco de dados;
+## 🎯 Objetivos
 
-Identificar as tabelas existentes;
+- Compreender a estrutura de um banco de dados relacional;
+- Identificar as tabelas existentes;
+- Consultar informações armazenadas;
+- Contabilizar registros utilizando funções SQL;
+- Recuperar informações específicas por meio de condições;
+- Relacionar dados de diferentes tabelas;
+- Praticar a utilização do MySQL Workbench.
 
-Contabilizar registros armazenados;
+---
 
-Consultar informações de clientes;
+## 🗂️ Estrutura do Banco de Dados
 
-Recuperar informações sobre pizzas;
+O banco de dados trabalha com tabelas responsáveis por armazenar informações sobre os clientes, pedidos e produtos solicitados.
 
-Consultar os itens associados a determinados pedidos;
+### Tabelas principais
 
-Desenvolver consultas utilizando a linguagem SQL.
+| Tabela | Descrição |
+|---|---|
+| `Clientes` | Armazena os dados dos clientes cadastrados. |
+| `Pedidos` | Registra os pedidos realizados pelos clientes. |
+| `Itens_pedido` | Armazena as pizzas, quantidades e valores associados aos pedidos. |
 
-3. Estrutura do Repositório
+### Estrutura das tabelas
 
-O projeto está organizado em duas pastas principais:
+**Tabela: Clientes**
 
-Diretório
+| Campo | Descrição |
+|---|---|
+| `cliente_id` | Identificador do cliente |
+| `nome` | Nome do cliente |
+| `logradouro` | Endereço |
+| `numero` | Número do endereço |
+| `complemento` | Complemento do endereço |
+| `bairro` | Bairro |
+| `referencia` | Ponto de referência |
 
-Descrição
+**Tabela: Pedidos**
 
-pizzaria_db
+| Campo | Descrição |
+|---|---|
+| `pedido_id` | Identificador do pedido |
+| `cliente_id` | Identificador do cliente |
+| `data` | Data do pedido |
+| `hora` | Horário do pedido |
+| `valor` | Valor total do pedido |
 
-Diretório relacionado ao banco de dados da pizzaria.
+**Tabela: Itens_pedido**
 
-queries
+| Campo | Descrição |
+|---|---|
+| `pedido_id` | Identificador do pedido |
+| `pizza_id` | Identificador da pizza |
+| `quantidade` | Quantidade solicitada |
+| `valor` | Valor do item |
 
-Diretório destinado às consultas SQL da atividade.
+---
 
-Estrutura geral:
+## 💻 Consultas SQL
 
+A atividade utiliza comandos SQL para realizar consultas e obter informações sobre o banco de dados.
+
+### Principais comandos utilizados
+
+| Comando | Finalidade |
+|---|---|
+| `SHOW TABLES` | Exibe as tabelas existentes no banco. |
+| `SELECT` | Recupera informações das tabelas. |
+| `COUNT()` | Conta a quantidade de registros. |
+| `WHERE` | Filtra registros conforme uma condição. |
+| `JOIN` | Relaciona informações de diferentes tabelas. |
+
+As consultas são organizadas no arquivo SQL do projeto, permitindo executar e verificar os resultados de cada questão proposta na atividade.
+
+---
+
+## 📁 Estrutura do Repositório
+
+```text
 Sesi_BCD_aula09_pizzaria/
 │
 ├── pizzaria_db/
+│   └── Arquivos do banco de dados
 │
 ├── queries/
+│   └── Consultas SQL
 │
 └── README.md
+```
 
-4. Tecnologias e Ferramentas
+---
 
-Tecnologia / Ferramenta
+## 🛠️ Tecnologias e Ferramentas
 
-Utilização
+| Tecnologia | Utilização |
+|---|---|
+| MySQL | Gerenciamento do banco de dados |
+| SQL | Linguagem utilizada nas consultas |
+| MySQL Workbench | Execução e gerenciamento das consultas |
+| Visual Studio Code | Edição e organização dos arquivos |
+| GitHub | Armazenamento e versionamento do projeto |
 
-MySQL
+---
 
-Sistema de gerenciamento de banco de dados.
+## ▶️ Como Executar o Projeto
 
-SQL
+### 1. Clonar o repositório
 
-Linguagem utilizada para realizar consultas.
+```bash
+git clone https://github.com/giovanaremorini-dotcom/Sesi_BCD_aula09_pizzaria.git
+```
 
-MySQL Workbench
+### 2. Abrir o projeto
 
-Ambiente para execução e gerenciamento de consultas SQL.
+Abra a pasta `Sesi_BCD_aula09_pizzaria` no Visual Studio Code.
 
-Visual Studio Code
+### 3. Acessar as consultas
 
-Editor utilizado para organização dos arquivos do projeto.
+Entre na pasta `queries` e abra o arquivo SQL correspondente à atividade.
 
-GitHub
+### 4. Executar no MySQL Workbench
 
-Plataforma para armazenamento e versionamento do projeto.
+- Abra o MySQL Workbench;
+- Conecte-se ao servidor MySQL;
+- Selecione o banco de dados da pizzaria;
+- Abra ou cole as consultas SQL;
+- Execute os comandos;
+- Analise os resultados apresentados.
 
-5. Consultas SQL
+---
 
-A atividade utiliza comandos SQL para responder a questões relacionadas aos dados armazenados no banco da pizzaria.
+## 📚 Conhecimentos Desenvolvidos
 
-Entre os principais conteúdos abordados estão:
+Durante a realização da atividade, foram praticados conceitos fundamentais de Banco de Dados:
 
-Comando
+- Modelagem e organização de dados relacionais;
+- Estrutura de tabelas;
+- Consultas SQL;
+- Recuperação de informações;
+- Contagem de registros;
+- Filtragem de dados;
+- Relacionamento entre tabelas;
+- Utilização do MySQL Workbench;
+- Interpretação de resultados.
 
-Finalidade
+---
 
-SHOW TABLES
+<div align="center">
 
-Exibir as tabelas existentes no banco de dados.
+### 🍕 Sistema de Banco de Dados — Pizzaria
 
-SELECT
+**SQL | MySQL | Banco de Dados Relacional**
 
-Consultar informações armazenadas.
+*Atividade prática de Banco de Dados — SENAI/SESI*
 
-COUNT()
-
-Contabilizar registros.
-
-WHERE
-
-Aplicar condições às consultas.
-
-As consultas são utilizadas para obter informações sobre a quantidade de tabelas, clientes cadastrados, pizzas disponíveis e itens associados aos pedidos.
-
-6. Modelo de Dados
-
-O banco de dados trabalha com informações relacionadas a clientes, pedidos e itens dos pedidos.
-
-Entre as tabelas utilizadas na atividade estão:
-
-Tabela
-
-Finalidade
-
-Clientes
-
-Armazenar os dados dos clientes.
-
-Pedidos
-
-Registrar os pedidos realizados.
-
-Itens_pedido
-
-Armazenar os itens e suas respectivas quantidades em cada pedido.
-
-Essas tabelas permitem consultar informações e relacionar os registros de acordo com as necessidades da atividade.
-
-7. Como Executar
-
-Para executar as consultas desenvolvidas, siga as etapas:
-
-Clone ou baixe o repositório.
-
-Abra a pasta do projeto no Visual Studio Code.
-
-Acesse o diretório queries.
-
-Abra o arquivo SQL correspondente à atividade.
-
-Abra o MySQL Workbench.
-
-Conecte-se ao servidor MySQL.
-
-Selecione o banco de dados da pizzaria.
-
-Execute as consultas e verifique os resultados apresentados.
-
-8. Conhecimentos Desenvolvidos
-
-A atividade permite desenvolver conhecimentos fundamentais de Banco de Dados, especialmente:
-
-Introdução à linguagem SQL;
-
-Consulta e recuperação de informações;
-
-Identificação de tabelas;
-
-Contagem de registros;
-
-Aplicação de condições em consultas;
-
-Organização de dados relacionais;
-
-Utilização do MySQL Workbench;
-
-Interpretação dos resultados de consultas.
+</div>
